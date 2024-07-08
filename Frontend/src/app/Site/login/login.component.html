@@ -1,0 +1,9 @@
+<form (submit)="login()">
+    <label for="username">Username:</label>
+    <input id="username" [(ngModel)]="username" name="username" required>
+    <label for="password">Password:</label>
+    <input id="password" [(ngModel)]="password" name="password" type="password" required>
+    <div class="button-container">
+      <button class="button" type="submit">Login</button>
+    </div>
+  </form>

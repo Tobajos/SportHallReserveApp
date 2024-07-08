@@ -1,8 +1,9 @@
+
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Python
+
 *.pyc
 *.pyo
 *.pyd
@@ -11,6 +12,7 @@ __pycache__/
 *.sqlite3
 local_settings.py
 
+.env
 .venv/
 venv/
 *.log
@@ -38,9 +40,22 @@ coverage.xml
 .pytest_cache/
 
 
-.ipynb_checkpoints
-
-
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+
+node_modules/
+dist/
+tmp/
+build/
+
+
+.angular/
+.angular-cli.json
+angular.json
+package-lock.json
+yarn.lock
+
+
+.DS_Store
