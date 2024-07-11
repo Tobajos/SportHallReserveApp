@@ -1,0 +1,12 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+.user-info{
+    border: solid 1px;
+    width: 50%;   
+}
+

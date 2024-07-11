@@ -7,6 +7,7 @@ class Reservation(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     max_participants = models.PositiveIntegerField(default=1)
+    
 
 class Tournament(models.Model):
     name = models.CharField(max_length=50, blank=False,null=False)

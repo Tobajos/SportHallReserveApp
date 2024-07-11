@@ -1,0 +1,22 @@
+<form (ngSubmit)="register()" #registerForm="ngForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+  
+    <label for="first_name">First name:</label>
+    <input type="text" id="first_name" [(ngModel)]="first_name" name="first_name" required>
+  
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" [(ngModel)]="last_name" name="last_name" required>
+  
+    <label for="email">Email:</label>
+    <input id="email" [(ngModel)]="email" name="email" type="email" required>
+  
+    <label for="password">Password:</label>
+    <input id="password" [(ngModel)]="password" name="password" type="password" required>
+  
+    <label for="password_confirm">Confirm password:</label>
+    <input id="password_confirm" [(ngModel)]="password_confirm" name="password_confirm" type="password" required>
+  
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+  

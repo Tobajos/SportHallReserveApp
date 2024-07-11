@@ -32,6 +32,8 @@ class Login(APIView):
             "token": token.key,
             "user": serializer.data
         })
+    
+
 
 
 class Logout(APIView):

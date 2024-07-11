@@ -1,0 +1,65 @@
+.nav-button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: lightblue;
+  }
+  
+  .calendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .day-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time-slots div {
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .time-slots div:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected-time-slot {
+    background-color: lightblue;
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .today {
+    font-weight: bold;
+  }
+  
+  .past-day {
+    color: gray;
+  }
+  
+  .selected {
+    background-color: lightblue;
+  }
+  

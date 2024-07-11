@@ -1,0 +1,27 @@
+<div>
+    <h2>Reservation Calendar</h2>
+    <div class="navigation">
+      <button class="nav-button" (click)="previousWeek()">Previous Week</button>
+      <button class="nav-button" (click)="nextWeek()">Next Week</button>
+    </div>
+    <div class="calendar">
+      <div class="day" *ngFor="let day of daysToShow">
+        <div class="day-header" [ngClass]="{ 'today': isToday(day), 'past-day': isPastDay(day), 'selected': day === selectedDay }" (click)="selectDay(day)">
+          {{ day | date: 'EEEE, d MMMM' }}
+        </div>
+        <div class="time-slots">
+          <div *ngFor="let timeSlot of getTimeSlots(day)">
+            <div (click)="selectTimeSlot(day, timeSlot)" [ngClass]="{ 'selected-time-slot': isSelected(day, timeSlot), 'disabled': isPastDay(day) }">
+              {{ timeSlot }} - {{ calculateEndTime(timeSlot) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reservation-form">
+      <label for="participants">Number of participants:</label>
+      <input id="participants" type="number" [(ngModel)]="numParticipants" min="1" required>
+      <button (click)="reserveTimeSlot()" [disabled]="!selectedTimeSlot || !selectedDay || isPastDay(selectedDay)">Reserve</button>
+    </div>
+  </div>
+  

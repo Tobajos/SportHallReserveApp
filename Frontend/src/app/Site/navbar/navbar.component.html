@@ -1,3 +1,16 @@
-<div>
-    <a [routerLink]="'/login'">Login</a>
+<div class="container">
+    <div class="logo">
+        <p [routerLink]="'/'">LOGO</p>
+    </div>
+    <div class="buttons">
+        
+        <ng-container *ngIf="user; else loginButton">
+            <p class="navbar-text">Welcome <a [routerLink]="['profile',user.id]">{{user.username}}</a></p>
+            <a class="navbar-link" (click)="logout()">Logout</a>
+        </ng-container>
+        <ng-template #loginButton>
+            <a class="navbar-link" [routerLink]="'/login'">Login</a>
+        </ng-template>
+        
+    </div>
 </div>
